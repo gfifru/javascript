@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ДЗ 1</title>
+</head>
+<body>
+
+    <script>
+        // 1 задание
+        let tempСel = 32;
+        let tempFar = (9 / 5) * tempСel + 32;
+        alert("Температура в F: " + tempFar);
+
+        // 2 задание
+        let name = "Василий";
+        let admin = name;
+        console.log(admin);
+
+        // 3 задание
+        console.log(10 + 10 + "10"); // первые две 10 числа после слажения дают 20, затем прибавляется строка "10", получаем "2010"
+        console.log(10 + "10" + 10); // число 10 плюс строка "10" будет строка "1010" и далее прибавляем еще число 10, но т.к. при слажении числа и строки получается строка, то получеам "101010"
+        console.log(10 + 10 + +"10"); // т.к. унарный плюс переделывает стоку в число, то получеам 30
+        console.log(10 / -""); // деление на -0 будет -infinity
+        console.log(10 / +"2,5"); // при делении числа на строку будет NaN
+
+        // 4 задание
+        let mode = "normal"; // корректно
+        let my_valu3 = 102; // корректно, но не понятно
+        let 3my_value3 = "102"; // не корректно (с цифры нельзя начинать)
+        let __hello__ = "world"; // корректно, но лучше так не делать
+        let $$$ = "money"; // не корректно
+        let !0_world = true; // не корректно
+
+
+    </script>
+    
+</body>
+</html>
