@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ДЗ 2</title>
+</head>
+<body>
+
+    <script>
+        'use strict';
+
+        // 1 задание
+        /*let a = 1, b = 1, c, d;
+        c = ++a; alert(c);           // 2
+        d = b++; alert(d);           // 1
+        c = 2+ ++a; alert(c);      // 5
+        d = 2+ b++; alert(d);      // 4
+        alert(a);                    // 3
+        alert(b);                    // 3
+       
+        // 2 задание
+        let a = 2;
+        let x = 1 + (a *= 2);
+        alert(a);
+        alert(x);*/
+        
+        // 3 задание
+        let a = parseInt(prompt("Введите целое число a"));
+        let b = parseInt(prompt("Введите целое число b"));
+        let result = null;
+
+        if (a >= 0 && b >= 0){
+            result = a - b;
+            alert(`Разность чисел a и b = ${result}`);
+        } else if (a < 0 && b < 0){
+            result = a * b;
+            alert(`Произведение чисел a и b = ${result}`);
+        } else if (a * b < 0){
+            result = a + b;
+            alert(`Сумма чисел a и b = ${result}`);
+        }
+
+        // 4 задание
+        let x = 6;
+        let y = 4;
+        let sum = null;
+        let dif = null;
+        let mul = null;
+        let div = null;
+        function sumOfNumbers(x, y){
+            sum = x + y;
+            return sum;
+        }
+        function difOfNumbers(x, y){
+            dif = x - y;
+            return dif;
+        }
+        function mulOfNumbers(x, y){
+            mul = x * y;
+            return mul;
+        }
+        function divOfNumbers(x, y){
+            div = x / y;
+            return div;
+        }
+        sumOfNumbers(x, y);
+        alert(`Сумма чисел = ${sum}`);
+        difOfNumbers(x, y);
+        alert(`Разность чисел = ${dif}`);
+        mulOfNumbers(x, y);
+        alert(`Произведение чисел = ${mul}`);
+        divOfNumbers(x, y);
+        alert(`Деление чисел = ${div}`);
+
+        // 5 задание
+        function mathOperation(x, y, operation) {
+            switch (operation) {
+            case "+":
+                return sumOfNumbers(x, y);
+            case "-":
+                return difOfNumbers(x, y);
+            case "*":
+                return mulOfNumbers(x, y);
+            case "/":
+                return divOfNumbers(x, y);
+            default:
+                throw new Error("Операция " + operation + " не предусмотрена");
+            }
+        }
+        console.log(mathOperation(x, y, "+"));
+        console.log(mathOperation(x, y, "-"));
+        console.log(mathOperation(x, y, "*"));
+        console.log(mathOperation(x, y, "/"));
+        console.log(mathOperation(x, y, "@"));
+
+        // 6 задание
+        // смотрел видео
+    </script>
+    
+</body>
+</html>
