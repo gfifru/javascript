@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ДЗ 4</title>
+</head>
+
+<body>
+    <script>
+        'use strict';
+
+        // задание 1
+        let num = parseInt(prompt("Введите число от 0 до 999"));
+
+        function getDigitsOfNumber(num){
+            if (!Number.isInteger(num) || num < 0 || num > 999) {
+                alert("Значение аргумента должно быть в диапазоне [0 ... 999].");
+                return {};
+            }
+            return {
+                hundreds: Math.floor(num / 100),
+                tens: Math.floor(num / 10) % 10,
+                units: num % 10,
+            }
+        }
+
+        console.log(getDigitsOfNumber(num));
+
+        // задание 1.1
+        function Product(name, price) {
+            this.name = name,
+            this.price = price
+        }
+
+        Product.prototype.make25PercentDiscount = function () {
+            this.price = this.price - this.price * 0.25;
+        }
+
+        /*class Product {
+            constructor(name, price) {
+                this.name = name;
+                this.price = price;
+            }
+
+            make25PercentDiscount() {
+                this.price = this.price - this.price * 0.25;
+            }
+        }*/
+
+        let item1 = new Product('phone', 120);
+        item1.make25PercentDiscount();
+
+        let item2 = new Product('notebook', 140);
+        item2.make25PercentDiscount();
+
+        // задание 1.2 a
+        class Post {
+            constructor(author, text, date) {
+                this.author = author;
+                this.text = text;
+                this.date = date;
+            }
+
+            edit() {
+                this.text = prompt('Введите новый текст')
+            }
+        }
+
+        let post1 = new Post('Павел', 'Здесь будет текст', '10.04.2020');
+        post1.edit();
+
+        // задание 1.2 b
+        class AttachedPost extends Post {
+            constructor(author, text, date, highlighted) {
+                super(author, text, date);
+                this.highlighted = false;
+            }
+
+            makeTextHighlighted() {
+                this.highlighted = true;
+            }
+        }
+
+        let AttachedPost1 = new AttachedPost('Вася', 'Пробный текст', '11.04.2020');
+        AttachedPost1.makeTextHighlighted();
+        AttachedPost1.edit();
+
+
+    </script>
+</body>
+
+</html>
