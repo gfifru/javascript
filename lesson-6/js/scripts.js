@@ -97,7 +97,7 @@ let basket = {
             return;
         }
         let productRow = `
-            <div class="di_item">
+            <div class="di_item" data-id="${product.id}">
                 <div class="di_item_img"><a href="#"><img src="img/item-preview-1.png" alt="item-preview-1"></a></div>
                 <div class="di_item_info">
                     <div class="di_title">${product.name}</div>
