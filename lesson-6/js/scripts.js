@@ -1,3 +1,5 @@
+// http://shop.gfif.ru/basket.html - рабочий вариант
+
 'use strict';
 
 // выпадающая корзина

@@ -1,3 +1,5 @@
+// http://shop.gfif.ru/slider.html - рабочий вариант
+
 
 let slider = document.querySelector('.slider');
 
