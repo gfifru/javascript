@@ -679,16 +679,16 @@ body {
   line-height: 44px;
 }
 
+.fi__add:before {
+  content: url(../img/cart_white.png);
+  padding-right: 8px;
+  position: relative;
+  top: 6px;
+}
+
 .fi__add:hover {
   -webkit-box-shadow: 0 0 3px 3px rgba(255, 255, 255, 0.5);
           box-shadow: 0 0 3px 3px rgba(255, 255, 255, 0.5);
-}
-
-.fi__add img {
-  margin-right: 8px;
-  margin-right: 8px;
-  position: relative;
-  top: 5px;
 }
 
 .fi__item:hover {
